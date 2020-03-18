@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 
-namespace turPoeng1._1.Models
+namespace turPoeng1.Models
 {
    public class GeoLoaction{
         protected async void OnAppearing()

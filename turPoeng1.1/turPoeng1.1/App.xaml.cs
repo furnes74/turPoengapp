@@ -1,10 +1,11 @@
 ﻿using System;
+using turPoeng1.Services;
+using turPoeng1.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using turPoeng1._1.Services;
-using turPoeng1._1.Views;
 
-namespace turPoeng1._1
+
+namespace turPoeng1
 {
     public partial class App : Application
     {
@@ -15,6 +16,11 @@ namespace turPoeng1._1
 
             DependencyService.Register<MockDataStore>();
             MainPage = new MainPage();
+        }
+
+        private void InitializeComponent()
+        {
+           
         }
 
         protected override void OnStart()

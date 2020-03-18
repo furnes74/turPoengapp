@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using turPoeng1._1.Models;
+using turPoeng1.Models;
 
-namespace turPoeng1._1.Services
+namespace turPoeng1.Services
 {
     public class MockDataStore : IDataStore<Item>
     {

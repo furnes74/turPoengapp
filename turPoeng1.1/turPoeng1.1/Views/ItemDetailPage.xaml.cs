@@ -1,12 +1,9 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
+using turPoeng1.Models;
+using turPoeng1.ViewModels;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-using turPoeng1._1.Models;
-using turPoeng1._1.ViewModels;
-
-namespace turPoeng1._1.Views
+namespace turPoeng1.Views
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer

@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
+using turPoeng1.Models;
+using turPoeng1.Services;
 using Xamarin.Forms;
 
-using turPoeng1._1.Models;
-using turPoeng1._1.Services;
-
-namespace turPoeng1._1.ViewModels
+namespace turPoeng1.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

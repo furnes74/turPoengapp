@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="turPoeng1.Views.CreateUser"
+             xmlns:vm="clr-namespace:turPoeng1.ViewModels">
+    
+    <ContentPage.BindingContext>
+        <vm:CreateUserViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+      <StackLayout>
+            <Label Text="Ny bruker - Register deg her" x:Name="registrer" FontSize="Large" Margin="10" />
+            <Label Text="Fornavn" x:Name= "Fornavn" />
+            <Entry Placeholder="Skriv Fornavn her" MaxLength="50" 
+           TextChanged="OnEntryTextChanged"
+           Completed="OnEntryCompleted" />
+            <Label Text="Etternavn" x:Name ="Etternavn" />
+            <Entry Placeholder="Skriv Etternavn her" MaxLength="50"  />
+            <Label Text="mail" x:Name ="mail" />
+            <Entry Placeholder="Skriv din epostadresse her" MaxLength="255"  />
+
+            <Button Margin="0,10,0,0" Text="Registrer"
+                        Command="{Binding OpenWebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+
+        </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

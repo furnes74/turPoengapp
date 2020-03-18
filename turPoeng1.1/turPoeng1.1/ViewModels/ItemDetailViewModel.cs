@@ -1,8 +1,6 @@
-﻿using System;
+﻿using turPoeng1.Models;
 
-using turPoeng1._1.Models;
-
-namespace turPoeng1._1.ViewModels
+namespace turPoeng1.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel
     {

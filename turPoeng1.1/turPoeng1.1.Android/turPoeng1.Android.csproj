@@ -7,8 +7,8 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6968b3a4-1835-46a3-ac5c-1ae33b475983}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>turPoeng1._1.Droid</RootNamespace>
-    <AssemblyName>turPoeng1.1.Android</AssemblyName>
+    <RootNamespace>turPoeng1.Droid</RootNamespace>
+    <AssemblyName>turPoeng1.Android</AssemblyName>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -93,18 +93,15 @@
     <AndroidResource Include="Resources\drawable\xamarin_logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\turPoeng1.1\turPoeng1.1.csproj">
-      <Project>{26178CF1-A9DE-4369-94E9-7A267A26B3FD}</Project>
-      <Name>turPoeng1.1</Name>
+    <ProjectReference Include="..\turPoeng1.1\turPoeng1.csproj">
+      <Project>{A6D6CF18-6697-4FF9-9204-2A4B4E581C33}</Project>
+      <Name>turPoeng1</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\style.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\drawable\splash_logo.png_" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash_screen.xml">

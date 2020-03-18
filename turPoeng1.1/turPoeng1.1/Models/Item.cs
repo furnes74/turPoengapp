@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace turPoeng1._1.Models
+namespace turPoeng1.Models
 {
     public class Item
     {

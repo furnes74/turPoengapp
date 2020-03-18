@@ -3,12 +3,12 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
 
+using turPoeng1.Models;
+using turPoeng1.Views;
 using Xamarin.Forms;
 
-using turPoeng1._1.Models;
-using turPoeng1._1.Views;
 
-namespace turPoeng1._1.ViewModels
+namespace turPoeng1.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {

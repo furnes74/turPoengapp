@@ -7,7 +7,7 @@ using Android.Util;
 using Plugin.CurrentActivity;
 using System.Threading.Tasks;
 
-namespace turPoeng1._1.Droid
+namespace turPoeng1.Droid
 {
     [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
     public class SplashActivity : AppCompatActivity
@@ -36,7 +36,7 @@ namespace turPoeng1._1.Droid
         async void SimulateStartup()
         {
             Log.Debug(TAG, "Performing some startup work that takes a bit of time.");
-            await Task.Delay(200); // Simulate a bit of startup work.
+            await Task.Delay(100); // Simulate a bit of startup work.
             Log.Debug(TAG, "Startup work is finished - starting MainActivity.");
             StartActivity(new Intent(Application.Context, typeof(MainActivity)));
         }

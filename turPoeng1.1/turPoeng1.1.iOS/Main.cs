@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace turPoeng1._1.iOS
+namespace turPoeng1.iOS
 {
     public class Application
     {

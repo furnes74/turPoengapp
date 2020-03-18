@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace turPoeng1._1.Services
+namespace turPoeng1.Services
 {
     public interface IDataStore<T>
     {

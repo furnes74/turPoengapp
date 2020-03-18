@@ -1,9 +1,8 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
-namespace turPoeng1._1.ViewModels
+namespace turPoeng1.ViewModels
 {
     public class AboutViewModel : BaseViewModel
     {

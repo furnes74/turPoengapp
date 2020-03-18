@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using turPoeng1.Models;
+using turPoeng1.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using turPoeng1._1.Models;
-using turPoeng1._1.Views;
-using turPoeng1._1.ViewModels;
 
-namespace turPoeng1._1.Views
+
+namespace turPoeng1.Views
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
@@ -26,6 +22,7 @@ namespace turPoeng1._1.Views
 
             BindingContext = viewModel = new ItemsViewModel();
         }
+
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
@@ -44,12 +41,17 @@ namespace turPoeng1._1.Views
             await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
         }
 
-        protected async override void OnAppearing()
+        protected override void OnAppearing()
         {
             base.OnAppearing();
 
             if (viewModel.Items.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
+        }
+
+        async void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new CreateUser()));
         }
     }
 }

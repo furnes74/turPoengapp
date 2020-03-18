@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Plugin.Geolocator;
 using Android.Util;
 
-namespace turPoeng1._1.Droid
+namespace turPoeng1.Droid
 {
     [Activity(Label = "turPoeng1._1", Icon = "@mipmap/icon", Theme = "@style/MainTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity

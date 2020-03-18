@@ -4,8 +4,8 @@
             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             mc:Ignorable="d"
-            xmlns:views="clr-namespace:turPoeng1._1.Views"
-            x:Class="turPoeng1._1.Views.MainPage">
+            xmlns:views="clr-namespace:turPoeng1.Views"
+            x:Class="turPoeng1.Views.MainPage">
 
     <TabbedPage.Children>
         <NavigationPage Title="Hjem">
