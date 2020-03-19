@@ -21,14 +21,16 @@
     <ContentPage.Content>
       <StackLayout>
             <Label Text="Ny bruker - Register deg her" x:Name="registrer" FontSize="Large" Margin="10" />
-            <Label Text="Fornavn" x:Name= "Fornavn" />
-            <Entry Placeholder="Skriv Fornavn her" MaxLength="50" 
+            <Label Text="lFornavn" x:Name= "lFornavn" />
+            <Entry x:Name ="Firstname" Keyboard="Text" Placeholder="Skriv Fornavn her" MaxLength="50" 
            TextChanged="OnEntryTextChanged"
            Completed="OnEntryCompleted" />
-            <Label Text="Etternavn" x:Name ="Etternavn" />
-            <Entry Placeholder="Skriv Etternavn her" MaxLength="50"  />
-            <Label Text="mail" x:Name ="mail" />
-            <Entry Placeholder="Skriv din epostadresse her" MaxLength="255"  />
+            <Label Text="Etternavn" x:Name ="lEtternavn" />
+            <Entry x:Name ="lLastname" Keyboard="Text" Placeholder="Skriv Etternavn her" MaxLength="50"  />
+            <Label Text="mail" x:Name ="lmail"  />
+            <Entry x:Name ="mail" Keyboard="Email" Placeholder="Skriv din epostadresse her" MaxLength="255"   />
+            <Label Text="Passord" x:Name ="passord"  />
+            <Entry IsPassword="True" x:Name="password" Placeholder="Skriv ditt passord her" MaxLength="20"   />
 
             <Button Margin="0,10,0,0" Text="Registrer"
                         Command="{Binding OpenWebCommand}"
