@@ -75,7 +75,7 @@
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
 
-                <Button Text="Click me" Clicked="OnClickedPosts" />
+                <Button Text="Call the GET posts" Clicked="OnClickedPosts" />
             </StackLayout>
         </ScrollView>
     </Grid>

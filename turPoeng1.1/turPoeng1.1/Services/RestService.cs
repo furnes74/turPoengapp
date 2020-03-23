@@ -6,19 +6,28 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace TodoREST
+namespace turPoeng1.Services
 {
     public class RestService : IRestService
     {
         HttpClient _client;
 
-        public List<TodoItem> Items { get; private set; }
+     //   public List<TodoItem> Items { get; private set; }
 
         public RestService()
         {
             _client = new HttpClient();
+          //  _client.MaxResponseContentBufferSize = 256000;
+          //  _client.DefaultRequestHeaders.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded' "));
         }
+/*
+        public  async Task<T> PostResponse (string weburl, string jsonstring) where  T: class
+        {
+            var token = App.TokenDatabase.GetToken();
 
+        }
+*/
+        /*
         public async Task<List<TodoItem>> RefreshDataAsync()
         {
             Items = new List<TodoItem>();
@@ -91,5 +100,6 @@ namespace TodoREST
                 Debug.WriteLine(@"\tERROR {0}", ex.Message);
             }
         }
+        */
     }
 }
