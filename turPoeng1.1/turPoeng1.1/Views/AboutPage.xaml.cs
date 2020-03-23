@@ -14,5 +14,9 @@ namespace turPoeng1.Views
         {
             InitializeComponent();
         }
+        public void OnClickedPosts(object sender, EventArgs e)
+        {
+            (sender as Button).Text = "Click me again!";
+        }
     }
 }

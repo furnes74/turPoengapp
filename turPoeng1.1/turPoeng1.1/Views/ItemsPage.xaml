@@ -10,7 +10,7 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
-        <ToolbarItem Text="Min Klubb" Clicked="ToolbarItem_Clicked" />
+        <ToolbarItem Text="Create user" Clicked="ToolbarItem_Clicked" />
     </ContentPage.ToolbarItems>
     
 

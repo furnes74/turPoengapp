@@ -74,6 +74,8 @@
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
+
+                <Button Text="Click me" Clicked="OnClickedPosts" />
             </StackLayout>
         </ScrollView>
     </Grid>
