@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -17,9 +18,26 @@ namespace turPoeng1.Services
 
         public RestService()
         {
-            _client = new HttpClient();
-          //  _client.MaxResponseContentBufferSize = 256000;
-          //  _client.DefaultRequestHeaders.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded' "));
+            _client = new HttpClient(GetInsecureHandler());
+
+            // Android 4.1 or higher, Xamarin.Android 6.1 or higher
+              _client.MaxResponseContentBufferSize = 256000;
+            _client.DefaultRequestHeaders
+              .Accept
+              .Add(new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded"));//ACCEPT header
+            //_client.DefaultRequestHeaders.Add(new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded");
+           //  _client.DefaultRequestHeaders.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded' "));
+        }
+        public HttpClientHandler GetInsecureHandler()
+        {
+            var handler = new HttpClientHandler();
+            handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) =>
+            {
+                if (cert.Issuer.Equals("CN=localhost"))
+                    return true;
+                return errors == System.Net.Security.SslPolicyErrors.None;
+            };
+            return handler;
         }
         public async Task<List<Person>> RefreshDataAsync()
         {

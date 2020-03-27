@@ -19,20 +19,20 @@ namespace turPoeng1.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-           
-            base.OnCreate(savedInstanceState);
-
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-
-#if DEBUG
             System.Net.ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) =>
             {
                 if (certificate.Issuer.Equals("CN=localhost"))
                     return true;
                 return sslPolicyErrors == System.Net.Security.SslPolicyErrors.None;
             };
-#endif
+            base.OnCreate(savedInstanceState);
+
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+
+
+            //System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
 
             LoadApplication(new App());
         }
