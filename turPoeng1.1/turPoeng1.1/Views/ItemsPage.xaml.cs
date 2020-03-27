@@ -7,6 +7,7 @@ using Xamarin.Forms.Xaml;
 
 
 
+
 namespace turPoeng1.Views
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
@@ -52,6 +53,17 @@ namespace turPoeng1.Views
         async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new NavigationPage(new CreateUser()));
+        }
+
+        private async void ToolbarItem_Clicked_1(object sender, EventArgs e)
+        {
+            // PersonItem PersonManager 
+            //await App.PersonManager.GetTasksAsync();
+            PersonRest prest = new PersonRest();
+            listView1.ItemsSource = await prest.PersonItemManager.GetTasksAsync();
+          
+            string b = "abc"; 
+
         }
     }
 }

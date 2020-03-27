@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using turPoeng1.Models;
 
 namespace turPoeng1.Services
 {
@@ -12,7 +13,7 @@ namespace turPoeng1.Services
     {
         HttpClient _client;
 
-     //   public List<TodoItem> Items { get; private set; }
+        public List<Person> Items { get; private set; }
 
         public RestService()
         {
@@ -20,13 +21,39 @@ namespace turPoeng1.Services
           //  _client.MaxResponseContentBufferSize = 256000;
           //  _client.DefaultRequestHeaders.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded' "));
         }
-/*
-        public  async Task<T> PostResponse (string weburl, string jsonstring) where  T: class
+        public async Task<List<Person>> RefreshDataAsync()
         {
-            var token = App.TokenDatabase.GetToken();
+            Items = new List<Person>();
 
+            var uri = new Uri(string.Format(Constants.PersonItemsUrl, string.Empty));
+            try
+            {
+                var response = await _client.GetAsync(uri);
+                if (response.IsSuccessStatusCode)
+                {
+                    var content = await response.Content.ReadAsStringAsync();
+                    Items = JsonConvert.DeserializeObject<List<Person>>(content);
+                }
+                else { Debug.WriteLine(response.StatusCode.ToString()); }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(@"\tERROR {0}", ex.Message);
+            }
+
+            return Items;
         }
-*/
+
+
+
+
+        /*
+                public  async Task<T> PostResponse (string weburl, string jsonstring) where  T: class
+                {
+                    var token = App.TokenDatabase.GetToken();
+
+                }
+        */
         /*
         public async Task<List<TodoItem>> RefreshDataAsync()
         {

@@ -64,5 +64,63 @@ namespace turPoeng1.Models
         }
         */
 
+        //private void findPost()
+        //{
+        //    Console.WriteLine("Hello World!");
+        //    //Nord 
+        //    double posNorLati = 60.93939;
+
+        //    double maxNorth = 0.020740000000003533;
+        //    double maxSouth = 0.01821999999999946;
+
+        //    double maxWest = 0.03758999999999979;
+        //    double MaxEast = 0.03730000000000011;
+
+        //    //vest
+        //    double posVestLong = 4.99993;
+
+
+        //    //Sør
+        //    double posSorLati = 60.90043;
+
+        //    //øst
+        //    double posOstLong = 5.07482;
+
+        //    // current pos
+        //    double currLati = 60.91865;
+
+        //    double currLong = 5.03752;
+
+        //    double Lati;
+        //    //if(posNorLati|-currLati )
+
+        //    Console.WriteLine("Vestpunkt");
+        //    Console.WriteLine(currLong - posVestLong);
+        //    Console.WriteLine("østpunkt");
+        //    Console.WriteLine(posOstLong - currLong);
+
+        //    Lati = posNorLati - currLati; //0,020740000000003533 nor til Curr poss
+
+        //    //Nord til Current poss
+        //    //Console.WriteLine(Lati);
+
+        //    Lati = currLati - posSorLati; //0,01821999999999946 Curr poss til sør
+        //    //Nord til Current poss
+        //    Console.WriteLine(Lati);
+
+        //    //hvis gjeldendepos 
+        //    double wantedPosLati = 60.93934;
+        //    double wantedPosLong = 4.99919;
+        //    bool blnInsideGpsNordSor = Between(wantedPosLati, currLati - maxSouth, currLati + maxNorth);
+
+        //    Console.WriteLine("Innen for Nord/Sør grad");
+        //    Console.WriteLine(blnInsideGpsNordSor);
+
+        //    Console.WriteLine("Innen for Vest/Øst grad");
+        //    bool blnInsideGpsVestOst = Between(wantedPosLong, currLong - maxWest, currLong + MaxEast);
+        //    Console.WriteLine(blnInsideGpsVestOst);
+
+        //}
+
     }
 }

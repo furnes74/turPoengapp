@@ -24,6 +24,16 @@ namespace turPoeng1.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+#if DEBUG
+            System.Net.ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) =>
+            {
+                if (certificate.Issuer.Equals("CN=localhost"))
+                    return true;
+                return sslPolicyErrors == System.Net.Security.SslPolicyErrors.None;
+            };
+#endif
+
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

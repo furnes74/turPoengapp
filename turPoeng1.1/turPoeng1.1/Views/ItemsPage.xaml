@@ -11,10 +11,28 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
         <ToolbarItem Text="Create user" Clicked="ToolbarItem_Clicked" />
+        <ToolbarItem Text="Userinfo" Clicked="ToolbarItem_Clicked_1" />
     </ContentPage.ToolbarItems>
     
 
     <StackLayout>
+        <ListView x:Name="listView1"
+              Margin="20">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="20,0,0,0"
+                                 HorizontalOptions="StartAndExpand"
+                                 Orientation="Horizontal">
+                            <Label Text="{Binding Name}"
+                               VerticalTextAlignment="Center" />
+                            <Image Source="check.png"
+                               IsVisible="{Binding Done}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         <ListView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
                 VerticalOptions="FillAndExpand"
